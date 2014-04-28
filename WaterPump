@@ -1,9 +1,19 @@
+// This example use Arduino Mega
+// Tekscan FSR sensor w/ 1M ohm resistor on ground and A0, the positive pin goes to 5V
+// Motor PWM Pins D3 , D11
+// Motor Direction D12 , D13
+// Push Button D4 , correspondent LED Pin D8
+// LEDs available on Pin D24,D26 
+// FSR on A0, correspondent LED on Pin D22
+
 // A 12V water pump is connected to an Arduino and the push button turns the pump on and off
 // This example use Arduino Mega or Uno, and a motor driver shield
 // one push button on Digital pin 4 and ground
 // LED on pin D8
 // molmol@yesyesno.com
 // 04/23/2014
+
+
 
 
 #define CW  0
