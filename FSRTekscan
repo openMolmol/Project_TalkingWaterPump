@@ -1,0 +1,29 @@
+// TODO-need to merge this with the watre pump sketch
+//  empty can: FSR_Reading ~ 20
+//  80% Full watre can: FSR_Reading ~ 490
+
+
+const int FSR_Pin = A0; 
+const int FSR_Led = 22; // Digital Pin 22 on Mega
+
+int FSR_LEDoutputValue = 0; 
+
+void setup(){
+  Serial.begin(9600);
+}
+
+
+void loop(){
+ int FSR_Reading = analogRead(FSR_Pin); 
+
+ // map LED vaue between 50-255 here, BUT I THINK 
+ //THE LED should be blinking when FSR_Reading is below 50, 
+ //and when FSR reading about 490 it doesnt light up 
+ 
+ FSR_LEDoutputValue = map(FSR_Reading, 0, 700, 50, 255);  
+ 
+ analogWrite(FSR_Led, FSR_LEDoutputValue); 
+
+  Serial.println(FSR_Reading);
+  delay(250); //just here to slow down the output for easier reading
+}
