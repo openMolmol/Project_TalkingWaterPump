@@ -60,7 +60,7 @@ void loop()
    boolean button_pressed = handle_button();
    if (button_pressed && !bPrevButtonPressed){  // we just turned on  
       // Drive motor A (and only motor A) at various speeds, then stop.
-      driveArdumoto(MOTOR_A, 255); // Set motor A to CCW at max
+      driveArdumoto(MOTOR_A, 115); // Set motor A to CCW at max
       digitalWrite(8, HIGH);
   } else if (!button_pressed && bPrevButtonPressed){  // we just turned off
      stopArdumoto(MOTOR_A); // stop the pump
